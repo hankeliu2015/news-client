@@ -3,6 +3,6 @@ import storyReducer from './storyReducer';
 import userReducer from './userReducer'
 
 export default combineReducers({
-  storyReducer,
-  userReducer
+  storyReducer
+  // , userReducer
 })

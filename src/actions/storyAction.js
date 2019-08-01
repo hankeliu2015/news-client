@@ -12,7 +12,7 @@ export function fetchStories() {
             .then(response => response.json())
             .then(story => {
               console.log(story);
-              dispatch({type: 'FETCHING_STORY', payload: story})
+              dispatch({type: 'FETCHING_STORIES', payload: story})
               })
           )     //1st return
         })      //storyIds.map

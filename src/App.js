@@ -1,9 +1,10 @@
+import React, {Component} from 'react'
 // import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import React, {Component} from 'react'
 import { connect } from 'react-redux'
+import StoryList from './components/storyList'
 
 class App extends Component {
   render () {
@@ -27,6 +28,7 @@ class App extends Component {
 
         <hr></hr>
         <h4>Welcome to React Redux Job News</h4>
+        <StoryList />
 
       </div>
     );

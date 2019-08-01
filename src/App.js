@@ -1,16 +1,22 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 // import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { connect } from 'react-redux'
-import StoryList from './components/storyList'
+import { connect } from 'react-redux';
+import StoryList from './components/storyList';
+import { fetchStories } from './actions/storyAction'
 
 class App extends Component {
+
+  componentDidMount() {
+    this.props.fetchStories()
+  }
+
   render () {
 
     return (
-      <div className="App">
+      <div>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -28,7 +34,7 @@ class App extends Component {
 
         <hr></hr>
         <h4>Welcome to React Redux Job News</h4>
-        <StoryList />
+        {this.props.loading ? "...Stories loading" : <StoryList stories={this.props.stories} />}
 
       </div>
     );
@@ -37,8 +43,9 @@ class App extends Component {
 
 const mapStatetoProps = state => {
   return {
-    // stories: state.storyReducer.stories
+    stories: state.storyReducer.stories,
+    loading: state.storyReducer.loading
   }
 }
 
-export default connect(mapStatetoProps)(App)
+export default connect(mapStatetoProps, {fetchStories})(App)

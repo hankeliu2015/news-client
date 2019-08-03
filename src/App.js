@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import StoryList from './components/storyList';
 import { fetchStories } from './actions/storyAction'
 
+
 class App extends Component {
 
   componentDidMount() {

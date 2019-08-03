@@ -9,8 +9,9 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import { Story } from './components/story'
+import {BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+import { Story } from './components/story';
+
 
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

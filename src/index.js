@@ -11,7 +11,7 @@ import rootReducer from './reducers';
 
 import {BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 import { Story } from './components/story';
-
+import { Navbar } from './components/navbar'
 
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -23,6 +23,7 @@ ReactDOM.render(
 
   <Provider store={store}>
     <Router>
+      <Navbar />
       <Route path='/news' component={App} />
       <Route exact path='/story' component={Story} />
     </Router>

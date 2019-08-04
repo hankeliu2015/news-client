@@ -5,6 +5,7 @@ export class Story extends Component {
     return (
       <div>
         <h4>Single Story Show Page</h4>
+        <hr></hr>
       </div>
     )
   }

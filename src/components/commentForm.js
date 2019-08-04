@@ -6,8 +6,13 @@ class Comment extends Component {
 
     return (
       <div>
-        "Add comments and User Name"
-        <button>Add</button>
+        <form>
+          <label>Please add your comment</label>
+          <br></br>
+          <textarea></textarea>
+          <br></br>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     )
 

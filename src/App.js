@@ -8,7 +8,7 @@ import StoryList from './components/storyList';
 // import { fetchStories } from './actions/storyAction'
 
 import {BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
-import { Story } from './components/story';
+import { Story } from './containers/story';
 import { Navbar } from './components/navbar'
 
 class App extends Component {

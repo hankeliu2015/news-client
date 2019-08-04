@@ -7,6 +7,9 @@ import { connect } from 'react-redux';
 import StoryList from './components/storyList';
 import { fetchStories } from './actions/storyAction'
 
+import {BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+import { Story } from './components/story';
+import { Navbar } from './components/navbar'
 
 class App extends Component {
 
@@ -18,24 +21,14 @@ class App extends Component {
 
     return (
       <div>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            Learn React
-          </a>
-        </header>
+        <Router>
+          <Navbar />
+          <hr></hr>
+          <Route path='/news' component={StoryList} />
+          <Route exact path='/story' component={Story} />
+        </Router>
 
-        <hr></hr>
-        <h4>Welcome to React Redux Job News</h4>
-        {this.props.loading ? "...Stories loading" : <StoryList stories={this.props.stories} />}
+        // {this.props.loading ? "...Stories loading" : <StoryList stories={this.props.stories} />}
 
       </div>
     );

@@ -9,9 +9,9 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
-import {BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
-import { Story } from './components/story';
-import { Navbar } from './components/navbar'
+// import {BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+// import { Story } from './components/story';
+// import { Navbar } from './components/navbar'
 
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -22,14 +22,23 @@ const store = createStore(rootReducer,  composeEnhancer(applyMiddleware(thunk)),
 ReactDOM.render(
 
   <Provider store={store}>
-    <Router>
-      <Navbar />
-      <Route path='/news' component={App} />
-      <Route exact path='/story' component={Story} />
-    </Router>
+    <App />
   </Provider>,
 
   document.getElementById('root'));
+
+
+// ReactDOM.render(
+//
+//   <Provider store={store}>
+//     <Router>
+//       <Navbar />
+//       <Route path='/news' component={App} />
+//       <Route exact path='/story' component={Story} />
+//     </Router>
+//   </Provider>,
+//
+//   document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

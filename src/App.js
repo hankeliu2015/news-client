@@ -18,13 +18,13 @@ class App extends Component {
   // }
 
   render () {
-
+    // debugger
     return (
       <div>
         <Router>
           <Navbar />
-          <Route path='/news' component={StoryList} />
-          <Route exact path='/story' component={Story} />
+          <Route path='/storylist' component={StoryList} />
+          <Route exact path='/storycomments' component={Story} />
         </Router>
 
       </div>

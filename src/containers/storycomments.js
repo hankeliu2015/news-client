@@ -21,7 +21,12 @@ class StoryComments extends Component {
 }
 
 const mapStatetoProps = state => {
-  
+
+  // return {
+  //
+  //   story: this.state.stories.map((story, index) => story.id === linkId)
+  //
+  // }
 }
 
 export default connect(mapStatetoProps)(StoryComments)

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class StoryComments extends Component {
+class Comments extends Component {
 
   render(){
     return (
@@ -9,4 +9,4 @@ class StoryComments extends Component {
   }
 }
 
-export default StoryComments
+export default Comments

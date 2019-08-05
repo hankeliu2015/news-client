@@ -11,7 +11,7 @@ class StoryList extends Component {
   }
 
   render() {
-    // debugger
+    debugger
 
     const list = this.props.stories.map((story, index) => <li key={index}><Link to={`/storycomments`}> {story.title}</Link></li>)
 

@@ -8,7 +8,7 @@ import StoryList from './components/storyList';
 // import { fetchStories } from './actions/storyAction'
 
 import {BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
-import { Story } from './containers/story';
+import StoryComments from './containers/storycomments';
 import { Navbar } from './components/navbar'
 
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
         <Router>
           <Navbar />
           <Route path='/storylist' component={StoryList} />
-          <Route exact path='/storycomments' component={Story} />
+          <Route exact path='/storycomments' component={StoryComments} />
         </Router>
 
       </div>

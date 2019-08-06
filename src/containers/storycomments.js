@@ -19,7 +19,7 @@ class StoryComments extends Component {
         <hr></hr>
         <p> </p>
         <hr></hr>
-        <Comment />
+        <Comment storyId={story.id} />
         <hr></hr>
         <Comments />
         <hr></hr>

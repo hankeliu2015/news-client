@@ -8,9 +8,10 @@ class Comment extends Component {
   }
 
   handleOnChange = event => {
-    // debugger
+     // debugger
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
+      story_id: this.props.storyId
     })
   }
 
@@ -39,5 +40,5 @@ class Comment extends Component {
   }
 }
 
-//add the dispatch here. 
+//add the dispatch here.
 export default Comment

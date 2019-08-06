@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
 
-const link = {
+const linkStyle = {
   width: '100px',
   padding: '12px',
   margin: '0 6px 6px',
@@ -16,8 +16,8 @@ export class Navbar extends Component {
 
     return (
       <div>
-      <NavLink to="/storylist" style={link} activeStyle={{background: 'darkblue'}}>Story List</NavLink>
-      <NavLink to="/storycomments" style={link} activeStyle={{background: 'darkblue'}}>Story Comments</NavLink>
+      <NavLink to="/storylist" style={linkStyle} activeStyle={{background: 'darkblue'}}>Story List</NavLink>
+      <NavLink to="/storycomments" style={linkStyle} activeStyle={{background: 'darkblue'}}>Story Comments</NavLink>
       </div>
     )
   }

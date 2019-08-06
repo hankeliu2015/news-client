@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { commentUpload } from '../actions/commentAction'
 
 class Comment extends Component {
@@ -17,10 +18,7 @@ class Comment extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    //to pass the state.comments to fetch rails API create action.
-    //create a commentAction to fetch Rails API.
-    //how to pass the comments?
-
+    this.props.commentUpload(this.state)
   }
 
   render() {
@@ -41,4 +39,4 @@ class Comment extends Component {
 }
 
 //add the dispatch here.
-export default Comment
+export default connect(null, {commentUpload})(Comment)

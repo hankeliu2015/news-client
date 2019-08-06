@@ -16,6 +16,8 @@ class Comment extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
     //pass the state.comments to Rails API
+    //create a commentAction to fetch Rails API.
+
   }
 
   render() {

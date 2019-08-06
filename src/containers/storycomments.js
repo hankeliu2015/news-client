@@ -5,10 +5,14 @@ import { connect } from 'react-redux'
 
 class StoryComments extends Component {
 
+
   render() {
 
     const story = this.props.stories.find(story => story.id === parseInt(this.props.match.params.id))
+    // let storyDate = new Date(story.time)
+    // let storyDataString = storyDate.storyDataString()
 
+    // debugger
     return (
       <div>
         <h4>{story.title}</h4>

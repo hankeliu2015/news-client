@@ -5,14 +5,11 @@ import { connect } from 'react-redux'
 
 class StoryComments extends Component {
 
-
   render() {
 
     const story = this.props.stories.find(story => story.id === parseInt(this.props.match.params.id))
-    // let storyDate = new Date(story.time)
-    // let storyDataString = storyDate.storyDataString()
-
     // debugger
+    // storyDate = new Date(this.story.time)  //might need a condition to get it running first time wehn story is undefined.
     return (
       <div>
         <h4>{story.title}</h4>

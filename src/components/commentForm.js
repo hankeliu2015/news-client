@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { commentUpload } from '../actions/commentAction'
 
 class Comment extends Component {
 
@@ -38,4 +39,5 @@ class Comment extends Component {
   }
 }
 
+//add the dispatch here. 
 export default Comment

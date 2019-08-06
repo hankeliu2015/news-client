@@ -24,7 +24,7 @@ class App extends Component {
         <Router>
           <Navbar />
           <Route path='/storylist' component={StoryList} />
-          <Route exact path='/storycomments' component={StoryComments} />
+          <Route exact path='/storycomments/:id' component={StoryComments} />
         </Router>
 
       </div>

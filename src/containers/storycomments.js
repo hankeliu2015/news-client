@@ -4,12 +4,19 @@ import Comments from '../components/comments';
 import { connect } from 'react-redux'
 
 class StoryComments extends Component {
+
   render() {
+
+    const story = this.props.stories.find(story => story.id === parseInt(this.props.match.params.id))
+
     return (
       <div>
-        <h4>Single Story Show Page</h4>
+        <h4>{story.title}</h4>
+        <p>{story.text}</p>
+        <p>Time: {story.time}</p>
+
         <hr></hr>
-        <p> Content of a story</p>
+        <p> </p>
         <hr></hr>
         <Comment />
         <hr></hr>
@@ -21,12 +28,9 @@ class StoryComments extends Component {
 }
 
 const mapStatetoProps = state => {
-
-  // return {
-  //
-  //   story: this.state.stories.map((story, index) => story.id === linkId)
-  //
-  // }
+  return {
+    stories: state.storyReducer.stories
+  }
 }
 
 export default connect(mapStatetoProps)(StoryComments)

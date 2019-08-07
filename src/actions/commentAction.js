@@ -1,6 +1,5 @@
 export function commentUpload(storyComment) {
-  // let commentData = storyComment.serializeArray();
-  // debugger
+
   return dispatch => {
     dispatch({type: 'UPLOADING_COMMENT'});
     return (
@@ -18,7 +17,7 @@ export function commentUpload(storyComment) {
       })
       .then(resp => resp.json())
       .then(comment => {
-        dispatch({type:'FETCHING_COMMENT', payload: comment})
+        dispatch({type:'ADDING_COMMENT', payload: comment})
       })
       .catch(function(error) {console.log('There has been a problem with your fetch operation: ', error.message);})
 

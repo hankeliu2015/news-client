@@ -1,28 +1,55 @@
 import React, { Component } from 'react';
 import Comment from '../components/commentForm';
 import Comments from '../components/comments';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { fetchStories } from '../actions/storyAction'
 
 class StoryComments extends Component {
 
+  componentDidMount() {
+    this.props.fetchStories()
+    }
+
+  reloadSingleStory = () => {
+    const story = this.props.stories.find(story => story.id === parseInt(this.props.match.params.id))
+// debugger
+
+    if (story) {
+      let storyDate = new Date(story.time)
+      let dateString = storyDate.toDateString()
+    } else {
+      let dateSting = "Date is not available"
+    }
+
+
+    if (story) {
+      return  (
+        <div>
+          <h4>{story.title}</h4>
+          <p>{story.text}</p>
+          <p>Date: {this.dateString}</p>
+
+          <hr></hr>
+          <p> </p>
+          <hr></hr>
+          <Comment storyId={story.id} />
+          <hr></hr>
+          <Comments />
+          <hr></hr>
+        </div>
+      )
+    } else {
+      return (
+        <div> ...loading. Need another condition to remind user back to storylist.</div>
+      )
+    }
+  }
+
   render() {
 
-    const story = this.props.stories.find(story => story.id === parseInt(this.props.match.params.id))
-    // debugger
-    // storyDate = new Date(this.story.time)  //might need a condition to get it running first time wehn story is undefined.
     return (
       <div>
-        <h4>{story.title}</h4>
-        <p>{story.text}</p>
-        <p>Time: {story.time}</p>
-
-        <hr></hr>
-        <p> </p>
-        <hr></hr>
-        <Comment storyId={story.id} />
-        <hr></hr>
-        <Comments />
-        <hr></hr>
+        {this.reloadSingleStory()}
       </div>
     )
   }
@@ -34,4 +61,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(StoryComments)
+export default connect(mapStateToProps, {fetchStories})(StoryComments)

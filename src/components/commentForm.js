@@ -5,11 +5,10 @@ import { commentUpload } from '../actions/commentAction'
 class Comment extends Component {
 
   state = {
-    comment: ""
+    story_comment: ""
   }
 
   handleOnChange = event => {
-     // debugger
     this.setState({
       [event.target.name]: event.target.value,
       story_id: this.props.storyId
@@ -22,21 +21,18 @@ class Comment extends Component {
   }
 
   render() {
-
     return (
       <div>
         <form onSubmit={this.handleOnSubmit}>
           <label>Please add your comment</label>
           <br></br>
-          <textarea value={this.state.comment} name="comment" onChange={this.handleOnChange}></textarea>
+          <textarea value={this.state.comment} name="story_comment" onChange={this.handleOnChange}></textarea>
           <br></br>
           <button type="submit">Submit</button>
         </form>
       </div>
     )
-
   }
 }
 
-//add the dispatch here.
 export default connect(null, {commentUpload})(Comment)

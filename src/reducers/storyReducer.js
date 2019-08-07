@@ -1,4 +1,4 @@
-export default (state={stories: [], loading: false}, action) => {
+export default function storyReducer(state={stories: [], loading: false}, action) {
   switch(action.type) {
 
     case 'LOADING_STORIES':
@@ -8,7 +8,7 @@ export default (state={stories: [], loading: false}, action) => {
       return {stories: [...state.stories, action.payload], loading: false}
 
       // need another case or seperate reducer for commentAction. just add another comments key point to array for now.
-      
+
     default:
       return state;
   }

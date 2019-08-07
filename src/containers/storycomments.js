@@ -28,10 +28,10 @@ class StoryComments extends Component {
   }
 }
 
-const mapStatetoProps = state => {
+const mapStateToProps = state => {
   return {
     stories: state.storyReducer.stories
   }
 }
 
-export default connect(mapStatetoProps)(StoryComments)
+export default connect(mapStateToProps)(StoryComments)

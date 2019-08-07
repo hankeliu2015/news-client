@@ -4,7 +4,7 @@ export function commentUpload(storyComment) {
   return dispatch => {
     dispatch({type: 'UPLOADING_COMMENT'});
     return (
-      fetch('https://localhost:3001/comments.json', {
+      fetch('http://localhost:3001/comments', {
 
       method: 'POST',
       headers: {
@@ -13,7 +13,7 @@ export function commentUpload(storyComment) {
         // 'X-CSRF-Token': valueCSRF
       },
       body: JSON.stringify(storyComment),
-      credentials: 'same-origin'  //might not need this.
+      // credentials: 'same-origin'  //might not need this.
 
       })
       .then(resp => resp.json())
@@ -22,7 +22,6 @@ export function commentUpload(storyComment) {
       })
       .catch(function(error) {console.log('There has been a problem with your fetch operation: ', error.message);})
 
-      // .then(resp => reap.json()) // use this to update redux state.
     )
   }
 }

@@ -1,4 +1,4 @@
-export default (state={comments: [], loading: false}, action) => {
+export default function commentReducer(state={comments: [], loading: false}, action) {
   switch(action.type) {
 
     case 'UPLOADING_COMMENT':

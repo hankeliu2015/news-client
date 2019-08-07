@@ -11,7 +11,7 @@ class Comments extends Component {
     return (
       <div>
         <h3>Comments</h3>
-        <p>Display the comments about a single story from Redux State or Database? </p>
+        <p>Display the comments about a single story from Redux State and Database </p>
         {displayComments}
       </div>
     )

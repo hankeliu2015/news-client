@@ -12,22 +12,22 @@ class StoryComments extends Component {
 
   reloadSingleStory = () => {
     const story = this.props.stories.find(story => story.id === parseInt(this.props.match.params.id))
+
+    // if (story) {
+    //   let storyDate = new Date(story.time)
+    //   let dateString = storyDate.toDateString()
+    // } else {
+    //   let dateString = "Date is not available"
+    // }
+
 // debugger
-
-    if (story) {
-      let storyDate = new Date(story.time)
-      let dateString = storyDate.toDateString()
-    } else {
-      let dateSting = "Date is not available"
-    }
-
 
     if (story) {
       return  (
         <div>
           <h4>{story.title}</h4>
           <p>{story.text}</p>
-          <p>Date: {this.dateString}</p>
+          <p>Date: {story.time}</p>
 
           <hr></hr>
           <p> </p>

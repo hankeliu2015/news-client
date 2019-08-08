@@ -7,6 +7,11 @@ export default function commentReducer(state={comments: [], loading: false}, act
     case 'ADDING_COMMENT':
       return {comments: [...state.comments, action.payload], loading: false}
 
+    case 'FETCHING_COMMENTS':
+      return {...state, loading: true};
+
+    case 'LOADING_COMMENTS':
+      return {comments: [...state.comments, action.payload], loading: false}
     default:
       return state;
   }

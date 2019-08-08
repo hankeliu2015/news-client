@@ -12,12 +12,12 @@ class Comments extends Component {
      // debugger
     const storyComments = this.props.comments.filter(comment => parseInt(comment.story_id) ===  this.props.storyId)
 
-    const displayComments = storyComments.map((comment, index) => <li key={index}>{comment.story_comment}</li>)
+    const displayComments = storyComments.map((comment, index) => <li key={index}>{comment.story_comment} created at: {comment.created_at}</li>)
 
     return (
       <div>
         <h3>Comments</h3>
-        <p>Display the comments about a single story from Redux State and Database </p>
+        <p>Story comments of current user and other users's comment fetched from Database  </p>
         {displayComments}
       </div>
     )

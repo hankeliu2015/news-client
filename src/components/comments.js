@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import fetchComments from '../actions/commentFetchAction'
 
 class Comments extends Component {
 
-  render(){
+  componentDidMount() {
+    this.props.fetchComments();
+  }
 
-    //iterate through the comments in Redux.
-    const displayComments = this.props.comments.map((comment, index) => <li key={index}>{comment.story_comment}</li> )
+  render(){
+     // debugger
+    const storyComments = this.props.comments.filter(comment => parseInt(comment.story_id) ===  this.props.storyId)
+
+    const displayComments = storyComments.map((comment, index) => <li key={index}>{comment.story_comment}</li>)
 
     return (
       <div>
@@ -24,4 +30,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Comments)
+export default connect(mapStateToProps, {fetchComments})(Comments)

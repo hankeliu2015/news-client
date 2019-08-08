@@ -13,6 +13,7 @@ class StoryComments extends Component {
   reloadSingleStory = () => {
     const story = this.props.stories.find(story => story.id === parseInt(this.props.match.params.id))
 
+    // Display the story published time - wip
     // if (story) {
     //   let storyDate = new Date(story.time)
     //   let dateString = storyDate.toDateString()
@@ -34,7 +35,7 @@ class StoryComments extends Component {
           <hr></hr>
           <Comment storyId={story.id} />
           <hr></hr>
-          <Comments />
+          <Comments storyId={story.id}/>
           <hr></hr>
         </div>
       )

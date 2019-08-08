@@ -1,4 +1,4 @@
-export default function commentFetch() {
+export default function fetchComments() {
   return dispatch => {
     dispatch({type: 'FETCHING_COMMENTS'});
     return (

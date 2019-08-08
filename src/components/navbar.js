@@ -13,9 +13,8 @@ const linkStyle = {
 export class Navbar extends Component {
 
   render() {
-
     return (
-      <div>
+      <div >
       <NavLink to="/storylist" style={linkStyle} activeStyle={{background: 'darkblue'}}>Story List</NavLink>
       <NavLink to="/storycomments" style={linkStyle} activeStyle={{background: 'darkblue'}}>Story Comments</NavLink>
       </div>

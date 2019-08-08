@@ -17,6 +17,7 @@ export class Navbar extends Component {
       <div >
       <NavLink to="/storylist" style={linkStyle} activeStyle={{background: 'darkblue'}}>Story List</NavLink>
       <NavLink to="/storycomments" style={linkStyle} activeStyle={{background: 'darkblue'}}>Story Comments</NavLink>
+      <NavLink to="/authorstories" style={linkStyle} activeStyle={{background: 'darkblue'}}>Author Stories</NavLink>
       </div>
     )
   }

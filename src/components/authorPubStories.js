@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 class AuthorPubStories extends Component {
   render() {
@@ -11,4 +12,10 @@ class AuthorPubStories extends Component {
   }
 }
 
-export default AuthorPubStories;
+const mapStateToProps = state => {
+  return {
+    authorStories: state.storyReducer.authorStories
+  }
+}
+
+export default connect(mapStateToProps)(AuthorPubStories)

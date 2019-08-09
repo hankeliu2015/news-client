@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AuthorStoryForm from '../components/authorStoryForm';
-import AuthorPubStories from '../components/authorPubStories'
+import AuthorCreatedStories from '../components/authorCreatedStories'
 
 class AuthorStories extends Component {
 
@@ -8,7 +8,7 @@ class AuthorStories extends Component {
     return (
       <div>
         <AuthorStoryForm />
-        <AuthorPubStories />
+        <AuthorCreatedStories />
       </div>
     )
   }

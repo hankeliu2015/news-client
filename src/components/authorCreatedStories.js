@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
-class AuthorPubStories extends Component {
+class AuthorCreatedStories extends Component {
   render() {
 
     const authorStories = this.props.authorStories.map((story, index) => <li key={index}>{story.story_content} Created at: {story.created_at}</li>)
@@ -22,4 +22,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(AuthorPubStories)
+export default connect(mapStateToProps)(AuthorCreatedStories)

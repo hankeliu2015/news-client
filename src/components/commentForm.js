@@ -24,9 +24,9 @@ class Comment extends Component {
     return (
       <div>
         <form onSubmit={this.handleOnSubmit}>
-          <label for='storycomment'>Comment</label>
+          <label for='story_comment'>Comment</label>
           <br></br>
-          <textarea value={this.state.comment} id='storycomment' name="story_comment" rows="5" cols="60" onChange={this.handleOnChange}></textarea>
+          <textarea value={this.state.comment} id='story_comment' name="story_comment" rows="5" cols="60" onChange={this.handleOnChange}></textarea>
           <br></br>
           <label for="author">Author</label>
           <br></br>

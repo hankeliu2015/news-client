@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 class AuthorStoryForm extends Component {
   state = {
-    content: '',
-    name: ''
+    story_content: '',    //need to be the same as stories table column name
+    author_name: ''
   }
 
   handleOnChange = event => {
@@ -14,7 +14,7 @@ class AuthorStoryForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    //dispath function and pass in the createstory action. 
+    //dispath function and pass in the createstory action.
   }
 
   render() {
@@ -24,11 +24,11 @@ class AuthorStoryForm extends Component {
         <h4>Publishing your own story: </h4>
           <label>Story Content</label>
           <br></br>
-          <textarea rows="5" cols="60" name="content" onChange={this.handleOnChange} value={this.state.content}></textarea>
+          <textarea rows="5" cols="60" name="story_content" onChange={this.handleOnChange} value={this.state.content}></textarea>
           <br></br>
           <label>Author</label>
           <br></br>
-          <input type="text" name="name" onChange={this.handleOnChange} value={this.state.content}></input>
+          <input type="text" name="author_name" onChange={this.handleOnChange} value={this.state.name}></input>
           <br></br>
           <button type="submit">Submit</button>
         </form>

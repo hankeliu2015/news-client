@@ -17,7 +17,7 @@ export default function storyReducer(state={authorStories:[], allAuthorsStories:
       return {...state, loading:true};
 
     case 'LOADING_AUTHORSCREATEDSTORIES':   //will show them on homepage to let other authors read
-      return {...state, allAuthorStories: action.payload, loading: false};
+      return {...state, allAuthorsStories: action.payload, loading: false};
 
     default:
       return state;

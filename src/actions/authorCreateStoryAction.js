@@ -2,7 +2,7 @@ export function storyUpload(authorCreatedStory) {
   return dispatch => {
     dispatch({type: 'LOADING_AUTHORCREATEDSTORY'});
     return (
-      fetch('http:localhost:3001/stories', {
+      fetch('http://localhost:3001/stories', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

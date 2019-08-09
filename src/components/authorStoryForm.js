@@ -22,7 +22,7 @@ class AuthorStoryForm extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.hanleOnSubmit}>
+        <form onSubmit={this.handleOnSubmit}>
         <h4>Publishing your own story: </h4>
           <label>Story Content</label>
           <br></br>

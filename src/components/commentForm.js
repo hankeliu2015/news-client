@@ -5,7 +5,7 @@ import { commentUpload } from '../actions/commentAction'
 class Comment extends Component {
 
   state = {
-    story_comment: ""
+    story_comment: ""     //need to be the same as database column
   }
 
   handleOnChange = event => {

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { storyUpload } from '../actions/authorCreateStoryAction'
 
 class AuthorStoryForm extends Component {
   state = {
@@ -14,7 +16,7 @@ class AuthorStoryForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    //dispath function and pass in the createstory action.
+    this.props.storyUpload(this.state)
   }
 
   render() {
@@ -38,4 +40,4 @@ class AuthorStoryForm extends Component {
   }
 }
 
-export default AuthorStoryForm;
+export default connect(null, {storyUpload})(AuthorStoryForm)

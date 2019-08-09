@@ -7,7 +7,11 @@ export default function storyReducer(state={stories: [], loading: false}, action
     case 'FETCHING_STORIES':
       return {stories: [...state.stories, action.payload], loading: false}
 
-      // need another case or seperate reducer for commentAction. just add another comments key point to array for now.
+    case 'LOADING_AUTHORCREATEDSTORY':
+      return {...state, loading:true};
+
+    case 'ADDING_AUTHORCREATEDSTORY':
+      return {story: action.payload, loading:false}
 
     default:
       return state;

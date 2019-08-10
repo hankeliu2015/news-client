@@ -18,7 +18,7 @@ class AuthorCreatedStories extends Component {
         <h4>Your story is successfully published:</h4>
         {authorStories}
 
-        <h5>Please check others authors published story:</h5>
+        <h5>Please check other authors published story:</h5>
         {allAuthorsStories}
 
       </div>

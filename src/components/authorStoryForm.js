@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { storyUpload } from '../actions/authorCreateStoryAction'
+import { storyUpload } from '../actions/authorCreateStoryAction';
+import Button from 'react-bootstrap/Button'
 
 class AuthorStoryForm extends Component {
   state = {
@@ -32,7 +33,7 @@ class AuthorStoryForm extends Component {
           <br></br>
           <input type="text" name="author_name" onChange={this.handleOnChange} value={this.state.name}></input>
           <br></br>
-          <button type="submit">Submit</button>
+          <button variant="outline-primary" type="submit">Submit</button>
         </form>
 
       </div>

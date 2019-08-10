@@ -10,7 +10,9 @@ import StoryList from './components/storyList';
 import {BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 import StoryComments from './containers/storycomments';
 import { Navbar } from './components/navbar';
-import AuthorStories from './containers/authorstories'
+import AuthorStories from './containers/authorstories';
+
+import Container from 'react-bootstrap/Container'
 
 class App extends Component {
 
@@ -24,9 +26,12 @@ class App extends Component {
       <div>
         <Router>
           <Navbar />
-          <Route path='/storylist' component={StoryList} />
-          <Route exact path='/storycomments/:id' component={StoryComments} />
-          <Route exact path='/authorstories' component={AuthorStories} />
+          <Container>
+            <Route path='/storylist' component={StoryList} />
+            <Route exact path='/storycomments/:id' component={StoryComments} />
+            <Route exact path='/authorstories' component={AuthorStories} />
+
+          </Container>
 
         </Router>
 

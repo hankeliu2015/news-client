@@ -7,8 +7,8 @@ class AuthorStories extends Component {
   render() {
     return (
       <div>
-        <AuthorStoryForm />
-        <AuthorCreatedStories />
+          <AuthorStoryForm />
+          <AuthorCreatedStories />
       </div>
     )
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { commentUpload } from '../actions/commentAction'
+import { commentUpload } from '../actions/commentAction';
+import Button from 'react-bootstrap/Button'
 
 class Comment extends Component {
 
@@ -32,7 +33,7 @@ class Comment extends Component {
           <br></br>
           <input type='text' value={this.state.user} name="author" onChange={this.handleOnChange}></input>
           <br></br>
-          <button type="submit">Submit</button>
+          <Button type="submit">Submit</Button>
         </form>
       </div>
     )

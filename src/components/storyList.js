@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchStories } from '../actions/storyAction';
 import { Link } from 'react-router-dom'
-
+import Container from 'react-bootstrap/Container'
 
 class StoryList extends Component {
 
@@ -30,11 +30,14 @@ class StoryList extends Component {
 
     return (
       <div>
-        <h4 style={{ borderTop: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>Hacker News Feed </h4>
-        
-        <ol>
-          {this.props.loading ? "...Stories loading" : list}
-        </ol>
+        <Container>
+          <h4 style={{ borderTop: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>Hacker News Feed </h4>
+
+          <ol>
+            {this.props.loading ? "...Stories loading" : list}
+          </ol>
+
+        </Container>
       </div>
     )
   }

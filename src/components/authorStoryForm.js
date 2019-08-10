@@ -33,7 +33,7 @@ class AuthorStoryForm extends Component {
           <br></br>
           <input type="text" name="author_name" onChange={this.handleOnChange} value={this.state.name}></input>
           <br></br>
-          <button variant="outline-primary" type="submit">Submit</button>
+          <Button variant="outline-primary" type="submit">Submit</Button>
         </form>
 
       </div>

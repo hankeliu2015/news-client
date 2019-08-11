@@ -41,7 +41,7 @@ class StoryComments extends Component {
       )
     } else {
       return (
-        <div> ...loading. Need another condition to remind user back to storylist.</div>
+        <div> ...loading </div> //need another condition to remind user back to storylist.
       )
     }
   }

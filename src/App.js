@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import StoryList from './components/storyList';
 
-import {BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import StoryComments from './containers/storycomments';
 import { Navbar } from './components/navbar';
 import AuthorStories from './containers/authorstories';

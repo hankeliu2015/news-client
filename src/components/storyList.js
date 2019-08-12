@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchStories } from '../actions/storyAction';
 import { Link } from 'react-router-dom'
-import Container from 'react-bootstrap/Container'
 
 class StoryList extends Component {
 

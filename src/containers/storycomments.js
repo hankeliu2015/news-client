@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Comment from '../components/commentForm';
+import CommentForm from '../components/commentForm';
 import Comments from '../components/comments';
 import { connect } from 'react-redux';
 import { fetchStories } from '../actions/storyAction'
@@ -33,7 +33,7 @@ class StoryComments extends Component {
           <hr></hr>
           <p> </p>
           <hr></hr>
-          <Comment storyId={story.id} />
+          <CommentForm storyId={story.id} />
           <hr></hr>
           <Comments storyId={story.id}/>
           <hr></hr>

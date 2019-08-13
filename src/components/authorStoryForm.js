@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { storyUpload } from '../actions/authorCreateStoryAction';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form'
+// import Form from 'react-bootstrap/Form'
 
 
 class AuthorStoryForm extends Component {
@@ -37,15 +37,6 @@ class AuthorStoryForm extends Component {
           <br></br>
           <Button variant="outline-primary" type="submit">Submit</Button>
         </form>
-
-        <Form>
-          <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Story Content with Style</Form.Label>
-            <Form.Control as="textarea" rows="3" />
-            <Form.Label>Author with Style</Form.Label>
-            <Form.Control as="input" rows="1" />
-          </Form.Group>
-        </Form>
 
       </div>
     )

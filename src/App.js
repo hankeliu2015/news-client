@@ -6,7 +6,7 @@ import StoryList from './components/storyList';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import StoryComments from './containers/storycomments';
-import { Navbar } from './components/navbar';
+import Navbar from './components/navbar';
 import AuthorStories from './containers/authorstories';
 
 import Container from 'react-bootstrap/Container'

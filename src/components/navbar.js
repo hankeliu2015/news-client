@@ -10,9 +10,7 @@ const linkStyle = {
   color: 'white',
 }
 
-export class Navbar extends Component {
-
-  render() {
+export default function Navbar() {
     return (
       <div >
       <NavLink to="/storylist" style={linkStyle} activeStyle={{background: 'darkblue'}}>Story List</NavLink>
@@ -20,5 +18,4 @@ export class Navbar extends Component {
       <NavLink to="/authorstories" style={linkStyle} activeStyle={{background: 'darkblue'}}>Author Stories</NavLink>
       </div>
     )
-  }
 }

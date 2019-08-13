@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchStories } from '../actions/storyAction';
 import { Link } from 'react-router-dom'
 
-class StoryList extends Component {
+class StoriesContainer extends Component {
 
   componentDidMount() {
     this.props.fetchStories()
@@ -45,4 +45,4 @@ const mapStatetoProps = state => {
     loading: state.storyReducer.loading
   }
 }
-export default connect(mapStatetoProps, {fetchStories})(StoryList)
+export default connect(mapStatetoProps, {fetchStories})(StoriesContainer)

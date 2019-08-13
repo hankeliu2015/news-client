@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchStories } from '../actions/storyAction';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import StoriesList from '../components/storiesList'
 
 class StoriesContainer extends Component {
 

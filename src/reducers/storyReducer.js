@@ -1,4 +1,4 @@
-export default function storyReducer(state={authorStories:[], allAuthorsStories:[], stories: [], loading: false}, action) {
+export default function storyReducer(state={authorStories:[], allAuthorsStories:[], stories: [], singleStory: [], loading: false}, action) {
   switch(action.type) {
 
     case 'LOADING_STORIES':
@@ -18,6 +18,12 @@ export default function storyReducer(state={authorStories:[], allAuthorsStories:
 
     case 'LOADING_AUTHORSCREATEDSTORIES':   //will show them on homepage to let other authors read
       return {...state, allAuthorsStories: action.payload, loading: false};
+
+    case 'LOADING_SINGLE_STORY':
+      return {...state, loading:true}
+
+    case 'FETCH_SINGLE_STORY':
+      return {...state, singleStory: action.payload, loading: false}
 
     default:
       return state;

@@ -16,8 +16,11 @@ class StoryComments extends Component {
 
   reloadSingleStory = () => {
 
-    // debugger
     const story = this.props.singleStory
+
+    const storyComments = this.props.comments.filter(comment => parseInt(comment.story_id) ===  story.id)
+
+    const displayComments = storyComments.map((comment, index) => <li key={index}>{comment.story_comment} created at: {comment.created_at}</li>)
 
     if (story) {
       return  (
@@ -26,7 +29,7 @@ class StoryComments extends Component {
           <hr></hr>
           <CommentForm storyId={story.id} />
           <hr></hr>
-          <Comments storyId={story.id}/>
+          <Comments storyComments={storyComments} dislayComments={displayComments}/>
           <hr></hr>
         </div>
       )

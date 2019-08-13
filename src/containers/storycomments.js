@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import CommentForm from '../components/commentForm';
 import Comments from '../components/comments';
 import { connect } from 'react-redux';
-import { fetchStories } from '../actions/storyAction'
+// import { fetchStories } from '../actions/storyAction';
+import { fetchSingleStory } from '../actions/singleStoryAction'
 
 class StoryComments extends Component {
 
   componentDidMount() {
-    this.props.fetchStories()
+    this.props.fetchSingleStory(this.props.match.params.id)
     }
 
   reloadSingleStory = () => {
-    const story = this.props.stories.find(story => story.id === parseInt(this.props.match.params.id))
+    // const story = this.props.stories.find(story => story.id === parseInt(this.props.match.params.id))
+
+    const story = this.props.singleStory
 
     // Display the story published time - wip
     // if (story) {
@@ -58,8 +61,9 @@ class StoryComments extends Component {
 
 const mapStateToProps = state => {
   return {
-    stories: state.storyReducer.stories
+    stories: state.storyReducer.stories,
+    singleStory: state.storyReducer.singleStory
   }
 }
 
-export default connect(mapStateToProps, {fetchStories})(StoryComments)
+export default connect(mapStateToProps, {fetchSingleStory})(StoryComments)

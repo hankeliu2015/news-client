@@ -5,7 +5,7 @@ export function fetchSingleStory(storyId) {
       fetch(`https://hacker-news.firebaseio.com/v0/item/${storyId}.json?print=pretty`)
       .then(resp => resp.json())
       .then(story => {
-        dispatch({type: 'FETCHING_SINGLE_STORY', payload: story})
+        dispatch({type: 'FETCH_SINGLE_STORY', payload: story})
       })
     )
   }

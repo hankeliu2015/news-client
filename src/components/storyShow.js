@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SingleStory(props) {
+export default function StoryShow(props) {
   return (
     <div>
       <h4>{props.story.title}</h4>

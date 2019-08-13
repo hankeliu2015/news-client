@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CommentForm from '../components/commentForm';
 import Comments from '../components/comments';
-import SingleStory from '../components/singleStory';
+import StoryShow from '../components/storyShow';
 import { connect } from 'react-redux';
 // import { fetchStories } from '../actions/storyAction';
 import { fetchSingleStory } from '../actions/singleStoryAction'
@@ -30,7 +30,7 @@ class StoryComments extends Component {
     if (story) {
       return  (
         <div>
-          <SingleStory story={story} />
+          <StoryShow story={story} />
           <hr></hr>
           <CommentForm storyId={story.id} />
           <hr></hr>

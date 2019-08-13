@@ -11,9 +11,9 @@ class AuthorStories extends Component {
   }
 
   render() {
-    const authorStories = this.props.authorStories.map((story, index) => <li key={index}>{story.story_content} Created at: {story.created_at}</li>)
+    const authorStories = this.props.authorStories.map((story, index) => <li key={story.id}>{story.story_content} Created at: {story.created_at}</li>)
 
-    const allAuthorsStories = this.props.allAuthorsStories.map((story, index) => <li key={index}>{story.story_content} Created at: {story.created_at}</li>)
+    const allAuthorsStories = this.props.allAuthorsStories.map((story, index) => <li key={story.id}>{story.story_content} Created at: {story.created_at}</li>)
 
     return (
       <div>

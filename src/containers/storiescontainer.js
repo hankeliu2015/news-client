@@ -30,11 +30,7 @@ class StoriesContainer extends Component {
 
     return (
       <div>
-          <h4 style={{ borderTop: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>News Feed from Hacker News </h4>
-
-          <ol>
-            {this.props.loading ? "...Stories loading" : list}
-          </ol>
+        <StoriesList list={list} loading={this.props.loading} />
       </div>
     )
   }

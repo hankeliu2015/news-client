@@ -4,28 +4,20 @@ import Comments from '../components/comments';
 import StoryShow from '../components/storyShow';
 import { connect } from 'react-redux';
 // import { fetchStories } from '../actions/storyAction';
-import { fetchSingleStory } from '../actions/singleStoryAction'
+import { fetchSingleStory } from '../actions/singleStoryAction';
+import fetchComments from '../actions/commentFetchAction'
 
 class StoryComments extends Component {
 
   componentDidMount() {
-    this.props.fetchSingleStory(this.props.match.params.id)
+    this.props.fetchSingleStory(this.props.match.params.id);
+    this.props.fetchComments();
     }
 
   reloadSingleStory = () => {
-    // const story = this.props.stories.find(story => story.id === parseInt(this.props.match.params.id))
 
+    // debugger
     const story = this.props.singleStory
-
-    // Display the story published time - wip
-    // if (story) {
-    //   let storyDate = new Date(story.time)
-    //   let dateString = storyDate.toDateString()
-    // } else {
-    //   let dateString = "Date is not available"
-    // }
-
-// debugger
 
     if (story) {
       return  (
@@ -58,8 +50,9 @@ class StoryComments extends Component {
 const mapStateToProps = state => {
   return {
     stories: state.storyReducer.stories,
-    singleStory: state.storyReducer.singleStory
+    singleStory: state.storyReducer.singleStory,
+    comments: state.commentReducer.comments
   }
 }
 
-export default connect(mapStateToProps, {fetchSingleStory})(StoryComments)
+export default connect(mapStateToProps, {fetchSingleStory, fetchComments})(StoryComments)

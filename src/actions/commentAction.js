@@ -19,7 +19,7 @@ export function commentUpload(storyComment) {
       .then(comment => {
         dispatch({type:'ADDING_COMMENT', payload: comment})
       })
-      .catch(function(error) {console.log('There has been a problem with your fetch operation: ', error.message);})
+      .catch(function(error) {console.log('There has been a problem with your fetch POST operation: ', error.message);})
 
     )
   }

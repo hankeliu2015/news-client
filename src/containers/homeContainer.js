@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-class HomeContainer extends Component {
+class Home extends Component {
   render() {
+    debugger
     return (
       <div>
         <h3>Home Page for Cookies Testing</h3>
@@ -10,4 +11,4 @@ class HomeContainer extends Component {
   }
 }
 
-export default HomeContainer
+export default Home

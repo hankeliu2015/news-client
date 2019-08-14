@@ -10,7 +10,7 @@ import Navbar from './components/navbar';
 import AuthorStories from './containers/authorstories';
 
 import Container from 'react-bootstrap/Container';
-import HomeContainer from './containers/homeContainer';
+import Home from './containers/homeContainer';
 import { withCookies } from 'react-cookie'
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
           <Navbar />
           <br></br>
           <Container>
-            <Route path='/' render={() => (<HomeContainer cookies={this.props.cookies} />)} />
+            <Route path='/' render={() => (<Home cookies={this.props.cookies} />)} />
             <Route path='/stories' component={StoriesContainer} />
             <Route exact path='/storycomments/:id' component={StoryComments} />
             <Route exact path='/authorstories' component={AuthorStories} />

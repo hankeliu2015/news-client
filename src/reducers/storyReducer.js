@@ -13,7 +13,7 @@ export default function storyReducer(state={authorStories:[], allAuthorsStories:
     case 'ADDING_AUTHORCREATEDSTORY':   // will show it on the page when author is writing. as confirmation the story is published.
       return {...state, authorStories: [...state.authorStories, action.payload], loading:false};
 
-    case 'FETCHING_AUTHORSCREATEDSTORIES':
+    case 'FETCHING_AUTHORSCREATEDSTORIES':  //might have the fetching and loading opposite
       return {...state, loading:true};
 
     case 'LOADING_AUTHORSCREATEDSTORIES':   //will show them on homepage to let other authors read

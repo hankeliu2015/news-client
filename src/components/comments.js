@@ -9,16 +9,18 @@ class Comments extends Component {
   // }
 
   render(){
-     debugger
+
     // const storyComments = this.props.comments.filter(comment => parseInt(comment.story_id) ===  this.props.storyId)
     //
-    // const displayComments = storyComments.map((comment, index) => <li key={index}>{comment.story_comment} created at: {comment.created_at}</li>)
+   const displayComments = this.props.storyComments.map((comment, index) => <li key={index}>{comment.story_comment} created at: {comment.created_at}</li>)
 
+// debugger
     return (
       <div>
-        <h3>Comments - current user and other users's comment(s) fetched from Database</h3>
-
-        {this.props.storyComments}
+        <h4>Comments - current user and other users's comment(s) fetched from Database</h4>
+        <ul>
+          {displayComments}
+        </ul>
       </div>
     )
   }

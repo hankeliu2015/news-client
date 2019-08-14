@@ -22,7 +22,10 @@ class StoryComments extends Component {
 
     const displayComments = storyComments.map((comment, index) => <li key={index}>{comment.story_comment} created at: {comment.created_at}</li>)
 
+    // debugger
+
     if (story) {
+
       return  (
         <div>
           <StoryShow story={story} />

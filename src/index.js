@@ -10,6 +10,8 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
+import { CookiesProvider } from 'react-cookie'
+
 // import {BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 // import { Story } from './components/story';
 // import { Navbar } from './components/navbar'
@@ -22,9 +24,13 @@ const store = createStore(rootReducer,  composeEnhancer(applyMiddleware(thunk)),
 
 ReactDOM.render(
 
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <CookiesProvider>
+
+    <Provider store={store}>
+      <App />
+    </Provider>
+
+  </CookiesProvider>,
 
   document.getElementById('root'));
 

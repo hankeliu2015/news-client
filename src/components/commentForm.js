@@ -31,7 +31,7 @@ class CommentForm extends Component {
           <br></br>
           <label>Author</label>
           <br></br>
-          <input type='text' value={this.state.user} name="author" onChange={this.handleOnChange}></input>
+          <input type='text' value="do not enter" name="author" onChange={this.handleOnChange}></input>
           <br></br>
           <Button type="submit">Submit</Button>
         </form>

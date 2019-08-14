@@ -4,7 +4,7 @@ class HomeContainer extends Component {
   render() {
     return (
       <div>
-        <h3>Home Page</h3>
+        <h3>Home Page for Cookies Testing</h3>
       </div>
     )
   }

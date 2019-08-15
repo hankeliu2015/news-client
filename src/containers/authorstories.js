@@ -15,7 +15,7 @@ class AuthorStories extends Component {
   render() {
     const authorStories = this.props.authorStories.map((story, index) => <li key={story.id}>{story.story_content} Created at: {story.created_at}</li>)
 
-    const allAuthorsStories = this.props.allAuthorsStories.slice(0).reverse().map((story, index) => <Card body key={story.id}>{story.story_content} Created at: {story.created_at}</Card>)
+    const allAuthorsStories = this.props.allAuthorsStories.slice(0).reverse().map((story, index) => <Card body key={story.id}>{story.story_content} Author: {story.author_id} Created at: {story.created_at}</Card>)
 
     return (
       <div>

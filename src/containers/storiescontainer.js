@@ -12,7 +12,7 @@ class StoriesContainer extends Component {
 
   render() {
 
-    const list = this.props.stories.map((story, index) => <li key={index}><Link to={`/storycomments/${story.id}`}> {story.title}</Link></li>)
+    const list = this.props.stories.map((story, index) => <li key={index}><Link to={`${story ? "/storycomments/" + story.id : 'stories'}`}> {story ? story.title : "This Story is missing"}</Link></li>)
 
     // const list = this.props.stories.map((story, index) => <li key={index}><Link to={`/storycomments/${story.id}`}> {story.title}</Link></li>)
 

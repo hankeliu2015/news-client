@@ -4,11 +4,9 @@ import CurrentUserForm from '../components/currentUserForm'
 
 class User extends Component {
   render() {
-
     const { cookies } = this.props;
-
     const userName = cookies.get('name')
-    // debugger
+
     return (
       <div>
         <h6>Current User Name in Cookies: {userName}</h6>

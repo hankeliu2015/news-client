@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import CurrentUserForm from '../components/currentUserForm'
 
 class Home extends Component {
   render() {
@@ -10,8 +11,8 @@ class Home extends Component {
     // debugger
     return (
       <div>
-        <h3>Home Page for Cookies Testing</h3>
-        <p>Current User: {userName}</p>
+        <h6>Current User Name in Cookies: {userName}</h6>
+        <CurrentUserForm cookies={cookies}/>
       </div>
     )
   }

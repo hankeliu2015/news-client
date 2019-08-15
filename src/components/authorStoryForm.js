@@ -19,7 +19,8 @@ class AuthorStoryForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.storyUpload(this.state)
+    this.props.storyUpload(this.state);
+
   }
 
   render() {

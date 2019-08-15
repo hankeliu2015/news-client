@@ -22,15 +22,12 @@ class App extends Component {
           <Navbar />
           <br></br>
           <Container>
-            <Route path='/' render={() => (<Home cookies={this.props.cookies} />)} />
+            <Route exact path='/' render={() => (<Home cookies={this.props.cookies} />)} />
             <Route path='/stories' component={StoriesContainer} />
             <Route exact path='/storycomments/:id' component={StoryComments} />
             <Route exact path='/authorstories' component={AuthorStories} />
-
           </Container>
-
         </Router>
-
       </div>
     );
   }

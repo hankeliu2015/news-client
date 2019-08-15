@@ -22,7 +22,7 @@ class CurrentUserForm extends Component {
       <div>
         <form onSubmit={this.handleOnSubmit}>
           <input type='text' onChange={this.handleOnChange} name="userName" value={this.state.userName}></input>
-          <input type='submit' value="Set User Name"></input>
+          <input type='submit' value="Set User Name in Cookies"></input>
         </form>
       </div>
     )

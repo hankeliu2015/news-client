@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import CurrentUserForm from '../components/currentUserForm'
 
-class Home extends Component {
+class User extends Component {
   render() {
 
     const { cookies } = this.props;
@@ -24,4 +24,4 @@ const mapStateToProps = (state, ownProps) => {
     cookies: ownProps.cookies
   })
 }
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps)(User)

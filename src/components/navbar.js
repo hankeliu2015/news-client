@@ -13,7 +13,7 @@ const linkStyle = {
 export default function Navbar() {
     return (
       <div >
-        <NavLink to="/" style={linkStyle} activeStyle={{background: 'darkblue'}}>Home</NavLink>
+        <NavLink to="/" style={linkStyle} activeStyle={{background: 'darkblue'}}>User</NavLink>
         <NavLink to="/stories" style={linkStyle} activeStyle={{background: 'darkblue'}}>Stories</NavLink>
         <NavLink to="/storycomments" style={linkStyle} activeStyle={{background: 'darkblue'}}>Story Comments</NavLink>
         <NavLink to="/authorstories" style={linkStyle} activeStyle={{background: 'darkblue'}}>Author Stories</NavLink>
